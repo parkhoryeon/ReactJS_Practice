@@ -1,0 +1,11 @@
+# React JS는 UI를 interactive 하게 만들어줘
+  React JS는 여러분의 웹사이트에 interactivity(상호작용)을 만들어줘
+
+# React JS 없이 쓴 바닐라 JS 코드와 React JS로 작성한 코드를 비교해보는 순간
+  React JS가 왜 태어났는지, 이것이 얼마나 편리한지 깨닫게 될거야
+
+# React JS를 설치하기 위해서는 두 개의 Javascript 코드를 import 해야 해.[ react / react-dom ]
+
+https://unpkg.com/react@17.0.2/umd/react.production.min.js
+
+https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js
