@@ -173,6 +173,54 @@ https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js
 # 좋아, React JS 세계에서는, 이 input은 uncontrolled이라고 알려져있어.
   그 말인 즉, 여기 input의 value는 우리가 통제할 수 없단거지.
 
+# Props는 일종의 방식이야. 부모 컴포넌트로부터 자식 컴포넌트에 데이터를 보낼 수 있게 해주는 방법.
+
+# 컴포넌트라는것은 단지 함수야. 어떤 JSX를 반환하는 그 뿐이야.
+
+# 네가 만들고 사용하는 모든 컴포넌트들은 "()" 괄호로 argument(인자)를 받는다는 거야. 리액트가 넣어주는 거지.
+  여기 첫 번째 argument의 이름은 마음대로 지어줄 수 있어.
+  사람들은 이 인자 이름을 props라고 부르지. Btn으로부터 전달 받는 properties인거지
+
+# 결국 <Btn banana="Save Changes"/> 이렇게 쓰는것은 Btn()를 불러서 banana라는 인자를 이런식으로 보내는 것과 같은거야.
+  Btn({banana: "Save Changes"}) 와 동일한거야. 왜냐하면 "Btn"은 함수니까.
+
+# 두 번째 인자는 없어. props는 첫 번째이자 유일한 인자야. 이 Btn이 전달 받는 유일한 인자.
+
+# 내가 만약 onClick을 커스텀 컴포넌트에다가 넣는다면 그것은 이벤트리스너가 아닌 props야.
+
+# prop으로는 text, boolean 말고도 함수도 보낼 수 있다.
+
+# React Memo
+  만약 부모(App)가 어떤 state라도 변경이 있다? 모든 자식들은 다시 그려질거야(re-render)
+  그리고 이게 추후에 네 어플리케이션이 느려지는 원인이 될 수도 있어.
+  그 컴포넌트가 천 개의 컴포넌트를 그리고 있다고 말이야.
+  React JS에게 만약 이 props가 변경되지 않는다면 다시 그릴 필요가 없다는 것을 말해줬을 뿐이야.
+
+# PropTypes라는 이름의 한 패키지가 있어.
+  PropType은 네가 어떤 타입의 prop을 받고 있는지를 체크해준단 말이지. 정말로 유용해
+  <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+  우리의 컴포넌트 이름을 가져와서 타입이 뭐고 어떤 모양이어야 하는지를 우리가 설명해줄 수 있다는거지.
+  prop이름과, 그 type을 쓰면 된다.
+  Btn.propTypes = {
+      text: PropTypes.string.isRequired,
+      fontSize: PropTypes.number,
+  }  
+
+# 이번 섹션에서는 우리는 Create React App에 대해서 친해져 볼거야.
+  create-react-app은 리액트 어플리케이션을 만드는 최고의 방식이야.
+  봤다시피 우리가 이전에 만든 리액트 어플리케이션은 스크립트를 import 함으로써 만들어졌지.
+  create-react-app을 사용한다면, React JS 어플리케이션을 만듦에 있어 훨씬 쉬워질 거야.
+  이유는, create-react-app은 엄청나게 많은 스크립트들과 많은 사전설정들을 너를 위해서 준비해주기 때문이지.
+
+# 예를들면, 네가 create-react-app을 이용해서 작업을 할 때, 개발 서버에 접근한다든가, 자동으로 새로고침을 시켜준다든가,
+  즉각적으로 어플리케이션 안에 CSS를 포함시켜 준다든가 하는 기능들이 있어
+
+# 그리고, 우리가 웹사이트를 publish할 준비가 되면 create-react-app은 publish하는 명령어를 갖고 있단 말이지.
+  코드를 압축하고, 좀 더 빠르게 만들고 그냥 진짜 멋진 녀석이야.
+  다들 리액트 어플리케이션을 만들어야 할 때 이걸 사용한단 말이지
+
+# 그러기 위해서는 너는 node.js를 설치해줘야 한다.
+
 
 
 
